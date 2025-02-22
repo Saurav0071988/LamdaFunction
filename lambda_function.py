@@ -2,6 +2,8 @@ import json
 
 def lambda_handler(event, context):
     # TODO implement
-   Country=json.loads(event['body'])['country']
-    message="i love my {}".format(Country)
-    return message
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Hello from Lambda test by Saurav!')
+    }
+
